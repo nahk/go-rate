@@ -1,8 +1,8 @@
 go-rate
 ===============
 
-[![Build Status](https://travis-ci.org/beefsack/go-rate.svg?branch=master)](https://travis-ci.org/beefsack/go-rate)
-[![GoDoc](https://godoc.org/github.com/beefsack/go-rate?status.svg)](https://godoc.org/github.com/beefsack/go-rate)
+[![Build Status](https://travis-ci.org/nahk/go-rate-api.svg?branch=master)](https://travis-ci.org/nahk/go-rate-api)
+[![GoDoc](https://godoc.org/github.com/nahk/go-rate-api?status.svg)](https://godoc.org/github.com/nahk/go-rate-api)
 
 **go-rate** is a rate limiter designed for a range of use cases,
 including server side spam protection and preventing saturation of APIs you
@@ -15,13 +15,13 @@ API rate limits.
 Usage
 -----
 
-Import `github.com/beefsack/go-rate` and create a new rate limiter with
+Import `github.com/nahk/go-rate-api` and create a new rate limiter with
 the `rate.New(limit int, interval time.Duration)` function.
 
 The rate limiter provides a `Wait()` and a `Try() (bool, time.Duration)` method
 for both blocking and non-blocking functionality respectively.
 
-API documentation available at [godoc.org](http://godoc.org/github.com/beefsack/go-rate).
+API documentation available at [godoc.org](http://godoc.org/github.com/nahk/go-rate-api).
 
 Examples
 --------
@@ -37,7 +37,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/beefsack/go-rate"
+	"github.com/nahk/go-rate-api"
 )
 
 func main() {
@@ -73,7 +73,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/beefsack/go-rate"
+	"github.com/nahk/go-rate-api"
 )
 
 func main() {
@@ -111,7 +111,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/beefsack/go-rate"
+	"github.com/nahk/go-rate-api"
 )
 
 var rl = rate.New(3, time.Second) // 3 times per second
@@ -148,3 +148,4 @@ Authors
 
 * [Michael Alexander](https://github.com/beefsack)
 * [Geert-Johan Riemer](https://github.com/GeertJohan)
+* [Matt T. Proud](https://github.com/matttproud)
